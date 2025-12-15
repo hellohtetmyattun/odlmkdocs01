@@ -1,4 +1,6 @@
 site_name: ODL Notes with mkdocs
+site_description: Personal notes and documentation built with MkDocs Material
+site_language: en
 
 nav:
   - Home: index.md
@@ -6,6 +8,65 @@ nav:
 
 theme:
   name: material
+  language: en
   favicon: assets/favicon.ico
+
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
   features:
     - navigation.tabs
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+extra:
+  generator: false
