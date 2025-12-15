@@ -1,0 +1,11 @@
+site_name: ODL Notes with mkdocs
+
+nav:
+  - Home: index.md
+  - About: about.md
+
+theme:
+  name: material
+  favicon: assets/favicon.ico
+  features:
+    - navigation.tabs
